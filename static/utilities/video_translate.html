@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id='favicon' rel="shortcut icon" href="../images/final_logo.png" type="image/x-png">
+    <title>GlobalSpeak-video</title>
+    <link rel="stylesheet" href="..\css\style.forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading">Video Translation</h1>
+    <div class="io-container">
+        <style>
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                background-color: red;
+                color: white;
+                border: none;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            .close-button:hover {
+                background-color: #8B0009;
+            }
+        
+            .container {
+                position: relative;
+            }
+        </style>
+        
+        <a href="/" class="close-button">&times;</a>
+            
+        <div class="form input" id="video-translate">
+            <form method="POST" autocomplete="false" id="form_video" enctype="multipart/form-data"
+                action="/audio_translate">
+                <label class="box-labels" style="display: inline-block; margin-bottom: 15px;"><b>Language :</b></label>
+
+                <select id="language-list-video" name="target_language" required>
+                    <option class="opt1" value="english"> Available Languages </option>
+                </select>
+                <br>
+                <br>
+                <label class="box-labels" style="display: inline-block; margin-bottom: 15px;"><b>VideoFile:</b></label>
+                <input type="file" name='file' class='btn-file-choose' required><br><br>
+                
+                <div id="original">
+
+                </div>
+                <br>
+                <p class="note" style="color: red; animation: blink 2s linear infinite;">Please upload the file in <b>.mp4</b> format as it best works in that format only!</p>
+                <style>
+                    @keyframes blink {
+                        0% { opacity: 1; }
+                        50% { opacity: 0; }
+                        100% { opacity: 1; }
+                    }
+                </style>
+                <br>
+                <button class="submit-btn" id="progress" onclick="handleVideoSubmittion()"><span>Translate
+                        now</span></button>
+            </form>
+        </div>
+        <div class="form-output">
+            <h3 style="text-align: center;">Translated Video</h3>
+            <br><br>
+            <div id="translated-video">
+                <p id="file-selection">
+                    <br>
+                </p>
+                <p id="selected-lang" style="text-align: center;">
+                    Translated Video will be displayed here! Note that it will take time to translate depending on the video size. We suggest you to upload big videos in chunks to boost productivity.
+                    Thank you!
+                    <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="state">
+        <p></p>
+    </div>
+    </div>
+    <script src="..\js\connector.js"></script>
+    <script src="..\js\editor.js"></script>
+    <script src="..\js\languageListAdder.js"></script>
+</body>
+</html>

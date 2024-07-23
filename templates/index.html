@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link id='favicon' rel="shortcut icon" href="../static/images/final_logo.png" type="image/x-png">
+    <title>GlobalSpeak</title>
+
+    <link rel="stylesheet" href="../static/css/style.index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <section class="header">
+        <nav>
+            <img src="../static/images/final_logo.png" alt="GlobalSpeak">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#">SUPPORTED LANGUAGES</a></li>
+                    <li><a href="#contact-us">CONTACT US</a></li>
+                </ul> 
+            </div>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Welcome to GlobalSpeak !</h1>
+            <h3>Overcoming Language Bariers in Online Learning </h3>
+            <br><br>
+            <a href="#features" class="hero-btns">Translate Now</a>
+            <br>
+            <p>
+                <br>
+                GlobalSpeak helps you to enhance your Online Remote Learning experience with its wide range of
+                features. <br>
+                GlobalSpeak Helps you to Translate and Transcribe your study material including Audio, Video Lectures
+                and lecture notes into 100+ Languages spoken all over the Globe including major languages like Hindi,
+                Marathi, Japanese, Spanish, Greek, German and many more ....
+            </p>
+        </div>
+    </section>
+
+    <section id="features">
+        <h1>Our Features</h1>
+        <div class="feature-container">
+          <div class="feature-card">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            <h2>Video Translation</h2>
+            <p>Translate lecture videos into 106+ languages, promoting global education for remote learners.</p>
+            <a href="../static/utilities/video_translate.html" class="feature-btn">Try Now</a>
+          </div>
+          <div class="feature-card">
+            <i class="fa fa-headphones" aria-hidden="true"></i>
+            <h2>Audio Translation</h2>
+            <p>Convert audio files into various languages, enabling worldwide access to educational content.</p>
+            <a href="../static/utilities/audio_translate.html" class="feature-btn">Try Now</a>
+          </div>
+          <div class="feature-card">
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+            <h2>Text Translation</h2>
+            <p>Translate text documents into 100+ languages, breaking down language barriers in education.</p>
+            <a href="../static/utilities/text_translate.html" class="feature-btn">Try Now</a>
+          </div>
+        </div>
+      </section>
+    
+    <!-- JavaScript for Toggle menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <div id="contact-us" class="section footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>&nbsp;&nbsp;About Us</h2>
+                <p class="footer-dark-text">
+                    ✨ Our mission is to make learning accessible and inclusive for everyone, no matter where you are in the world.<br><br>
+                    ✨ We are committed to leveraging technology to create a seamless and enriched learning environment for everyone. 
+                </p>
+            </div>
+            
+            <div class="footer-column">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i> About Us</a></li>
+                    <li><a href="#contact-us"><i class="fas fa-chevron-circle-right"></i> Contact Us</a></li>
+                    <li><a href="#features"><i class="fas fa-chevron-circle-right"></i> Features</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i> Supported Languages</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h2>&nbsp;Contact Us</h2>
+                <p class="footer-dark-text"><i class="fas fa-phone-alt"></i>&nbsp;&nbsp; +91 9876598765</p>
+                <p class="footer-dark-text"><i class="fas fa-envelope"></i>&nbsp;&nbsp; globalspeak@gmail.com</p>
+                <p class="footer-dark-text"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Dhule - 424001, Maharashtra, India</p>
+                <div class="share">
+                    <a href="#" class="fab fa-whatsapp" aria-label="WhatsApp" target="_blank"></a>
+                    <a href="#" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                    <a href="#" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+                    <a href="#" class="fab fa-instagram" aria-label="Instagram" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © Copyright <strong>Global Speak</strong> | 2023 All Rights Reserved |
+        </div>
+    </div>
+
+</body>
+</html>

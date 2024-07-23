@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id='favicon' rel="shortcut icon" href="../images/final_logo.png" type="image/x-png">
+    <title>GlobalSpeak-text</title>
+    <link rel="stylesheet" href="..\css\style.forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .close-button:hover {
+            background-color: #8B0009;
+        }
+    
+        .container {
+            position: relative;
+        }
+    </style>
+    
+    <a href="/" class="close-button">&times;</a>
+
+    <h1 class="heading">
+        Text Translation
+    </h1>
+    <div class="io-container">
+        <div class="form input" id="text-translate">
+            <form method="POST" autocomplete="false" id="form_text" enctype="multipart/form-data">
+                <label class="box-labels" style="display: inline-block; margin-bottom: 15px;"><b>Language :</b></label>
+                <select id="language-list-text" name="target_language" required>
+                    <option class="opt1" value="english"> Available Languages </option>
+                </select>
+                <br><br>
+                <label class="box-labels" style="display: inline-block; margin-bottom: 0px;"><b>Enter your text :</b></label> <br><br>
+                <textarea autocomplete="false" type="text" name="user_text" class="form-name" id="textarea"
+                    required></textarea><br>
+                <br>
+                <br>
+                <button class="submit-btn" onclick="handleTextSubmittion()"><span>Translate now</span></button>
+            </form>
+        </div>
+        
+        <div class="form-output" id="output">
+            <p class="language">
+                <b>Selected Language -</b> 
+            </p>
+            <p><b>Translated Text</b></p>
+            <div class="output-textarea">
+                <pre id="text">
+                    <!-- {{result}} -->
+                </pre>
+            </div>
+            <br><br>
+            <button class="submit-btn" onclick="handleTextCopy()"><span>Copy text</span></button>
+            <style>
+                #output.form-output::after {
+                    content: '😊';
+                    display: inline-block;
+                    font-size: 24px;
+                    margin-left: 200px;
+                    margin-top:10%;
+                    vertical-align: middle;
+                    animation: bounce 0.6s infinite alternate;
+                }
+                @keyframes bounce {
+                    from { transform: translateY(0px); }
+                    to { transform: translateY(-15px); }
+                }
+            </style>
+        </div>
+    </div>
+    </div>
+    <script src="..\js\connector.js"></script>
+    <script src="..\js\languageListAdder.js"></script>
+    <script src="..\js\editor.js"></script>
+</body>
+</html>
