@@ -1,0 +1,1 @@
+In this folder i.e. translated_audio all the translated audio files gets stored after getting the output.
