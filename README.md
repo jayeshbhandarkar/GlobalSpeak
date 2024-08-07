@@ -5,6 +5,7 @@ GlobalSpeak is a Python Flask web application designed to overcome language barr
 
 ## Prerequisites
 Before you begin, ensure you have the following installed:
+  Python 3.8 or Higher Version
 
 Run the following Commands.
 
