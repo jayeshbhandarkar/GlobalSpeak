@@ -37,4 +37,6 @@ To do so:-
 
 `STEP 5` - Open Web-Browser (Chrome) and navigate to `http://127.0.0.1:8000` to use this web-application.
 
+---
+
 ⬤ Please do ⭐ the Repository, if it helped you in anyway.
