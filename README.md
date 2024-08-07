@@ -34,7 +34,7 @@ To do so:-
 ```
     python app.py
 ```
-
+---
 `STEP 5` - Open Web-Browser (Chrome) and navigate to `http://127.0.0.1:8000` to use this web-application.
 
 ---
